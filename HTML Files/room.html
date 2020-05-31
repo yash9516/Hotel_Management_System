@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Le Meridien | Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h2{
+color: MediumVioletRed ;
+font-size: 200%;
+}
+h1,h3,h4,h5,h6{
+    color:Black;
+    font-family: verdana;
+    font-size: 150%;
+}
+
+body, html {
+     
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("http://pilotimage.us/wp-content/uploads/2018/08/5-star-hotel-bedroom-photos-and-video-wylielauderhouse-with-regard-to-5-star-hotel-bedroom.jpg");
+
+    min-height: 680px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+    position: center;
+    width: 30%;
+      margin-right: 300%;
+      margin-left: 30%;
+      right: 30;
+    margin: 30px;
+    
+    max-width: 500px;
+    padding: 12px;
+    background-color:rgba(230, 175, 100, 0.7);
+}
+
+/* Full-width input fields */
+	input[type=text], input[type=number],input[type=date],select {
+  width: 90%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: black;
+}
+
+/* Set a style for the submit button */
+.btn {
+   	background-color:;
+    color: black;
+    padding: 12px 20px;
+    border: black;
+    font-size:100%;
+    font-weight: bold;
+    cursor: pointer;
+    width: 90%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="hom1.html">Hotel Le Meridien</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="hom1.html">Home</a></li>
+      <li><a href="cus1.html">Add Customer</a></li>
+      <li><a href="dep1.html">Add Dependents</a></li>
+	  <li><a href="eve1.html">Events</a></li>
+	  <li class="active"><a href="rom1.html">Rooms</a></li>
+	   <li><a href="rev1.html">Reservations</a></li>
+	   <li><a href="Que1.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<h2 align="center">Hotel Le Meridien</h2>
+<div class="bg-img">
+  <form name="pyform" method="POST" action="http://localhost/cgi-bin/rom.py" class="container">
+    <h1>Room Details</h1>
+    <h1>Customer ID</h1>
+    <div class="paded">
+    <input type="number" name="custid" value="" required> 
+    </div>
+	 <h3>Floor Location</h3>
+  <input type="radio" name="floor" value="first" > 1st
+  <input type="radio" name="floor" value="second"> 2nd
+  <input type="radio" name="floor" value="third"> 3rd
+  <input type="radio" name="floor" value="fourth"> 4th
+  <input type="radio" name="floor" value="fifth"> 5th<br> 
+  <div class="form-group">
+   <h4>Room Number</h4>
+     <select id="room" name="Room_No">
+      <option>101</option>
+      <option>102</option>
+      <option>103</option>
+      <option>104</option>
+      <option>201</option>
+      <option>202</option>
+      <option>203</option>
+      <option>204</option>
+      <option>301</option>
+      <option>302</option>
+      <option>303</option>
+      <option>304</option>
+      <option>401</option>
+      <option>402</option>
+      <option>403</option>
+      <option>404</option>
+      <option>501</option>
+      <option>502</option>
+      <option>503</option>
+      <option>504</option>
+      </select>
+   <h5>Room Type</h5>
+  <input type="radio" name="roomtype" onclick="myFunction(this.value)" value="100">Deluxe<br>
+  <input type="radio" name="roomtype" onclick="myFunction(this.value)" value="150">Suite<br>
+  <input type="radio" name="roomtype" onclick="myFunction(this.value)" value="200">Twin<br>
+  <input type="radio" name="roomtype" onclick="myFunction(this.value)" value="250">King<br>
+  <input type="radio" name="roomtype" onclick="myFunction(this.value)" value="300">queen<br>
+  <h6>Price for selected room is:</h6><input type="text" id="result" name="price">
+  <script>
+function myFunction(roomtype) {
+    document.getElementById("result").value = roomtype;
+}
+</script>
+   <h6>Number of Bed's:</h6>
+  <input type="number" name="no_of_beds" min="1" max="4">
+  <h6>Parking Access</h6>
+  <input type="radio" name="parking" value="YES"> YES
+  <input type="radio" name="parking" value="NO"> NO
+  <h6>Balcony View</h6>
+  <input type="radio" name="balcony" value="Front view" > Front view
+  <input type="radio" name="balcony" value="Central View"> Central View 
+  <input type="radio" name="balcony" value="Downtown View"> Downtown View
+  <input type="radio" name="balcony" value="Pool-side View"> Pool-side View<br>
+
+   <h5>Check In date</h5> 
+   <input type="date" id="start" name="startdate" value=""> <br>
+  
+   <h5>Check Out date</h5> 
+   <input type="date" id="start" name="enddate" value=""> <br>
+
+    <h1>Total Number of Days </h1>
+    <input type="number" name="nodays" value="" required>
+  
+  <button type="submit" class="btn">Submit</button>
+   
+  </form>
+</div>
+
+</body>
+</html>

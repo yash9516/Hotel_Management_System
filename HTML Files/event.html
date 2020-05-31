@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Le Meridien | Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h2{color: MediumVioletRed ;
+font-size: 200%;
+}
+
+h1 {
+    color:Black;
+    font-family: verdana;
+    font-size: 150%;
+}
+body, html {
+     
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("https://www.banyantree.com/-/media/banyan-tree-media/thailand/bangkok/banyan-tree-bangkok_1.jpg");
+
+    min-height: 680px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+    position: center;
+    width: 20%;
+      margin-right: 300%;
+      margin-left: 30%;
+      right: 30;
+    margin: 30px;
+    
+    max-width: 500px;
+    padding: 12px;
+    background-color:rgba(240, 115, 68, 0.7);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=number],input[type=date],select {
+  width: 90%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+}
+
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: black;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color:rgba(255, 0, 0, 0.6);
+    color: black;
+    padding: 12px 20px;
+    border: black;
+    font-size:100%;
+    font-weight: bold;
+    cursor: pointer;
+    width: 90%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="hom1.html">Hotel Le Meridien</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="hom1.html">Home</a></li>
+      <li><a href="cus1.html">Add Customer</a></li>
+      <li><a href="dep1.html">Add Dependents</a></li>
+	  <li class="active"><a href="eve1.html">Events</a></li>
+	  <li><a href="rom1.html">Rooms</a></li>
+	   <li><a href="rev1.html">Reservations</a></li>
+	   <li><a href="Que1.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<h2 align="center">Hotel Le Meridien</h2>
+<div class="bg-img">
+ <form name="pyform" method="POST" action="http://localhost/cgi-bin/eve.py" class="container">
+    <h1>Event Information</h1>
+	
+    <label for="customer id"><b>Customer ID</b><br></label>
+    <div class="paded">
+    <input type="number" name="custid" value="" required> <br> 
+    </div>
+     
+     <label for="event"><b>Event Name</b></label><br>
+     <select id="event" name="eventname">
+      <option value="birthday">Birthday</option>
+      <option value="product">Product Launch</option>
+      <option value="Ceremony">Ceremony</option>
+      <option value="Wedding">Wedding</option>
+      <option value="Conference">Conference</option>
+      </select>
+
+    <label for="evtroom"><b>Event Room</b></label>
+    <input type="number" name="eventroom" value="" required> <br>
+    
+    <label for="occupancy"><b>Maximum Occupancy</b></label>
+    <input type="number" name="no" min="1" max="500"> <br>
+	
+    <label for="sdate"><b>Start Date</b></label> 
+    <input type="date" id="start" name="startdate"> <br>
+  
+    <label for="edate"><b>End Date</b></label> 
+    <input type="date" id="end" name="enddate "> <br>
+   
+    <label for="instruction"><b>Special Request</b></label>
+    <input type="text" placeholder="Your Request" name="request" value="" > <br>
+
+    <label for="evtamt"><b>Event Amount</b></label>
+    <input type="number" name="event_amt" value="" required> <br>
+	
+    
+    <button type="submit" class="btn">Submit</button>
+
+</form> 
+</div>
+
+</body>
+</html>	
+	
+	

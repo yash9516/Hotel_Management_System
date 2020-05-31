@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Le Meridien | Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h2{color: MediumVioletRed ;
+font-size: 200%;
+}
+h1 {
+    color:Black;
+    font-family: verdana;
+    font-size: 150%;
+}
+label:after {
+  content: ": ";
+}
+
+label {
+  
+  color:Khaki ;
+  font-weight: bold;
+  padding: 4px;
+ 
+  font-size: Large;
+}
+body, html {
+     
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("https://d1vp8nomjxwyf1.cloudfront.net/wp-content/uploads/sites/129/2017/04/22122403/Canal-Central-Business-Bay-Pre-Opening-WEB-10.jpg") ;
+
+    min-height: 680px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+    position: center;
+    width: 30%;
+      margin-right: 300%;
+      margin-left: 30%;
+      right: 30;
+    margin: 30px;
+    
+    max-width: 500px;
+    padding: 12px;
+    background-color:hsla(250, 100%, 80%, 0.3);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=number] {
+    width: 86%;
+    padding: 9px;
+    margin: 4px 0 10px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: black;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color:Moccasin;
+    color: black ;
+    padding: 12px 20px;
+    border: black;
+    font-size:100%;
+    font-weight: bold;
+    cursor: pointer;
+    width: 86%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="hom1.html">Hotel Le Meridien</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="hom1.html">Home</a></li>
+      <li><a href="cus1.html">Add Customer</a></li>
+      <li class="active"><a href="dep1.html">Add Dependents</a></li>
+	  <li><a href="eve1.html">Events</a></li>
+	  <li><a href="rom1.html">Rooms</a></li>
+	   <li><a href="rev1.html">Reservations</a></li>
+	   <li><a href="Que1.html">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<h2 align="center">Hotel Le Meridien</h2>
+<div class="bg-img">
+  <form name="pyform" method="POST" action="http://localhost/cgi-bin/dep.py" class="container">
+    <h1>Dependent Information</h1>
+    
+    <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Name" name="Name" value="" required> <br>
+
+    <label for="psw"><b>Customer ID</b></label>
+    <input type="number" placeholder=" " name="customerid" value="" required> <br>
+    
+    <label for="psw"><b>Age</b></label><br> 
+    <input type="number" placeholder="Enter Age" name="age" min="1" max="100" > <br>
+    
+    <label for="psw"><b>Email</b></label><br>
+    <input type="text" placeholder="Enter your email" name="email" value="" required><br>
+    
+   <label for="psw"><b>Phone Number</b></label> <br>
+  <input type="number" placeholder="Enter your number" name="phone" value="" required> <br><br>
+  
+    <button type="submit" class="btn">Submit</button>
+  
+  </form>
+</div>
+
+</body>
+</html>
